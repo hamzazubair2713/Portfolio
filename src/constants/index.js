@@ -51,7 +51,7 @@ const services = [
     icon: Api,
   },
   {
-    title: "Code Customization",
+    title: "Tech Stack Mastery",
     icon: optimization,
   },
 ];

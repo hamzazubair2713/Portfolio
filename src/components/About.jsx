@@ -1,56 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Tilt } from "react-tilt";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
-import { services } from "../constants";
+import { useInView } from "react-intersection-observer";
+import Lottie from "lottie-react";
+import something from "../assets/lootie.json";
 import { fadeIn, textVariant } from "../utils/motion";
 import { SectionWrapper } from "../hoc";
 
-const ServiceCard = ({ index, title, icon }) => {
-  return (
-    <Tilt className="xs:w-[250px] w-full">
-      <motion.div
-        variants={fadeIn("right", "spring", 0.5 * index, 0.75)}
-        className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
-      >
-        {" "}
-        <div
-          options={{ max: 45, scale: 1, speed: 450 }}
-          className="bg-tertiary rounded-[20px] py-5 px-12 min-h-[280px] flex justify-evenly items-center flex-col"
-        >
-          <img src={icon} alt={title} className="w-16 h-16 object-contain" />
-          <h3 className="text-white text-[20px] font-bold text-center">
-            {title}
-          </h3>
-        </div>
-      </motion.div>
-    </Tilt>
-  );
-};
-
 const About = () => {
+  const [isInView, setIsInView] = useState(false);
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      setIsInView(true);
+    }
+  }, [inView]);
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <motion.div
+        variants={textVariant()}
+        className="mx-auto max-w-[800px] text-center"
+      >
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>
+        <p className="mt-4 text-sm text-[16px] leading-[22px]">
+          Hi, I'm Hamza Zubair, a Professional Software Engineer with a degree
+          in Computer Science. Are you looking to establish a captivating online
+          presence that not only impresses but also prioritizes adherence to SEO
+          best practices? Look no further! I specialize in delivering bespoke
+          web solutions using cutting-edge technologies, including HTML, CSS,
+          Bootstrap, SCSS, Material-UI, JavaScript, React, Gatsby.js, Next.js,
+          and TypeScript. I also excel at converting any design file, whether
+          it's from Figma, PSD, or Adobe XD, into pixel-perfect HTML or React
+          components, seamlessly bringing your vision to life on the web.
+        </p>
       </motion.div>
-      <motion.p
-        variants={fadeIn("", "", 0.1, 1)}
-        className="mt-4 text-secodary text-[17px] max-w-3xl leading-[30px]"
-      >
-        Hi, I'm Hamza Zubair, a Professional Software Engineer with a degree in
-        Computer Science. Are you looking to establish a captivating online
-        presence that not only impresses but also prioritizes adherence to SEO
-        best practices? Look no further! I specialize in delivering bespoke web
-        solutions using cutting-edge technologies, including HTML, CSS,
-        Bootstrap, SCSS, Material-UI, JavaScript, React, Gatsby.js , Next.js,
-        and TypeScript
-      </motion.p>
-      <div className="mt-20 flex justify-center sm:justify-between flex-wrap gap-10">
-        {services.map((service, index) => (
-          <ServiceCard key={service.title} index={index} {...service} />
-        ))}
+
+      <div ref={ref} className="w-full max-w-[500px] m-auto">
+        {isInView && <Lottie animationData={something} loop={false} />}
       </div>
     </>
   );

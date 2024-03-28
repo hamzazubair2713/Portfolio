@@ -16,10 +16,11 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   return (
-    <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
+    <div>
       <Tilt
         options={{ max: 45, scale: 1, speed: 450 }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full">
+        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+      >
         <div className="relative w-full h-[230px]">
           <img
             src={image}
@@ -51,28 +52,27 @@ const ProjectCard = ({
           ))}
         </div>
       </Tilt>
-    </motion.div>
+    </div>
   );
 };
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
+      <div>
         <p className={styles.sectionSubText}>My Work</p>
-        <h2 className={styles.sectionHeadText}>Projects</h2>
-      </motion.div>
-      <div className="w-full flex ">
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]">
-          Following projects showcases my skills and experience through
-          real-world examples of my work. Each project is briefly described with
-          links to code repositories and live demos in it. It reflects my
-          ability to solve complex problems, work with different technologies,
-          and manage projects effectively.
-        </motion.p>
+        <h2 className={styles.sectionHeadText}>Explore My Projects</h2>
       </div>
-      <div className=" mt-20 flex flex-wrap gap-7">
+      <div className="w-full flex ">
+        <p className="mt-3 text-secondary sm:text-[17px] text-[14px] max-w-3xl sm:leading-[30px] leading-[20px]">
+          This section showcases a curated selection of my recent projects,
+          highlighting my expertise and versatility as a software engineer. From
+          dynamic web applications to responsive websites, each project
+          demonstrates my proficiency in utilizing cutting-edge technologies and
+          implementing innovative solutions. Take a closer look at my work and
+          see how I can help bring your ideas to life
+        </p>
+      </div>
+      <div className="mt-20 flex flex-wrap justify-center gap-7 mx-auto">
         {projects.map((project, index) => (
           <ProjectCard key={`project-${index}`} index={index} {...project} />
         ))}
