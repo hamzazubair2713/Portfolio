@@ -28,7 +28,7 @@ const ExperienceCard = ({ experience }) => {
       }
     >
       <div>
-        <h3 className="text-white text-[24px] font-bold">{experience.title}</h3>
+        <h3 className="text-white text-[20px] font-bold">{experience.title}</h3>
         <p className="text-secondary text-[16px] font-semibold">
           {experience.company_name}
         </p>
@@ -50,8 +50,11 @@ const Experience = () => {
   return (
     <>
       <motion.div variants={textVariant()}>
-        <p className={styles.sectionSubText}>What I have done so far</p>
-        <h2 className={styles.sectionHeadText}>Work Experience</h2>
+        <h2 className={styles.sectionHeadText}>Why Choose Me?</h2>
+        <p className={styles.sectionSubText}>
+          Looking for a developer who can bring your vision to life with
+          expertise and dedication? Here's why I stand out:
+        </p>
       </motion.div>
       <div>
         <VerticalTimeline>

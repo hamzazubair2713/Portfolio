@@ -97,40 +97,35 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Webevis Technologies",
+    title: "Innovation and Creativity",
     icon: reactjs,
     iconBg: "#383E56",
-    date: "July 2022 - Continue",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Innovation is at the heart of my work. I bring a fresh perspective and creative solutions to every project, pushing boundaries and thinking outside the box to deliver truly unique and impactful results.",
     ],
   },
   {
-    title: "UI/UX Developer",
-    company_name: "Webevis Technologies",
+    title: "Reliability and Consistency",
     icon: uiux,
     iconBg: "#E6DEDD",
-    date: "July 2022 - Continue",
     points: [
-      "Engaging in UI/UX development is a dynamic and multifaceted process that involves crafting the user interface and enhancing the overall user experience of web applications.",
-      "entails harnessing technologies such as React.js and related tools to create interactive, visually appealing, and intuitive interfaces.",
-      "This collaborative effort demands close cooperation with cross-functional teams, including designers and product managers, to align development objectives with user expectations.",
+      "You can count on me to deliver consistently excellent work, every time. With a track record of reliability and a commitment to meeting deadlines, I ensure that your project progresses smoothly and is completed to the highest standards.",
     ],
   },
   {
-    title: "API Integration",
-    company_name: "Webevis Technologies",
+    title: "Communication and Collaboration",
     icon: Api,
     iconBg: "#383E56",
-    date: "July 2022 - Continue",
     points: [
-      "Integrating APIs is a fundamental aspect of modern software development. API integration involves connecting different software systems, enabling them to communicate and share data seamlessly.",
-      "This essential process allows for the exchange of information between various applications, platforms, and services.",
-      "It plays a pivotal role in building feature-rich web applications and systems that interact with external data sources, such as social media networks, payment gateways, or third-party services.",
+      "Effective communication is key to project success. I prioritize open and transparent communication, keeping you informed every step of the way and actively seeking your input to ensure that your vision is fully realized.",
+    ],
+  },
+  {
+    title: "Passion and Dedication",
+    icon: Api,
+    iconBg: "#383E56",
+    points: [
+      "I am passionate about what I do, and that passion shines through in every project I undertake. With unwavering dedication and a relentless pursuit of excellence, I go above and beyond to exceed your expectations and deliver results that truly impress.",
     ],
   },
 ];

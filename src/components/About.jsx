@@ -39,11 +39,13 @@ const About = () => {
         variants={fadeIn("", "", 0.1, 1)}
         className="mt-4 text-secodary text-[17px] max-w-3xl leading-[30px]"
       >
-        I'm a skilled software developer and expertise in frameworks like React,
-        Next.js, Html, Css, Bootstrap5, Tailwind, I'm a quick learner and
-        collaborate closely with clients to create efficient, scalable, and
-        user-friendly solutions that solve real-world problems. Let's work
-        together to bring your ideas to life!
+        Hi, I'm Hamza Zubair, a Professional Software Engineer with a degree in
+        Computer Science. Are you looking to establish a captivating online
+        presence that not only impresses but also prioritizes adherence to SEO
+        best practices? Look no further! I specialize in delivering bespoke web
+        solutions using cutting-edge technologies, including HTML, CSS,
+        Bootstrap, SCSS, Material-UI, JavaScript, React, Gatsby.js , Next.js,
+        and TypeScript
       </motion.p>
       <div className="mt-20 flex justify-center sm:justify-between flex-wrap gap-10">
         {services.map((service, index) => (
