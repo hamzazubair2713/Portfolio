@@ -16,6 +16,10 @@ import {
   bootstrap,
   aka,
   shopspy,
+  lockey,
+  allocateHome,
+  smmQuizBg,
+  coachbg,
 } from "../assets";
 
 export const navLinks = [
@@ -160,37 +164,37 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Webevis",
+    name: "Lockey Connect",
     description:
-      "Webevis.com is a website that offers a platform for creating, sharing, and discovering interactive web-based visual stories, fostering creativity and engagement.",
+      "Lockey Connect is an innovative online platform designed for property buyers and agents to seamlessly connect and facilitate property transactions. With a focus on convenience and security, Lockey Connect offers a robust set of features to streamline the buying and selling process, ensuring a smooth and efficient experience for all users involved.",
     tags: [
       {
         name: "Next.js",
         color: "blue-text-gradient",
       },
       {
-        name: "Styled Components",
+        name: "Node.js",
         color: "green-text-gradient",
       },
       {
-        name: "Scss",
+        name: "Socket.IO",
         color: "pink-text-gradient",
       },
     ],
-    image: carrent,
+    image: lockey,
     // source_code_link: "https://github.com/",
   },
   {
-    name: "Green Me",
+    name: "Emissary",
     description:
-      "GreenMe is a platform by Fleet Forum promoting sustainable practices in humanitarian aid and development, offering resources, news, and networking opportunities.",
+      "Emissary is a cutting-edge payout and treasury management solution tailored for Web3.0 Companies, DAO organizations, and individual projects within the TRON ecosystem. Offering seamless functionality and a comprehensive feature set, Emissary serves as a one-stop platform for efficient payout operations.",
     tags: [
       {
-        name: "React.js",
+        name: "Next Js",
         color: "blue-text-gradient",
       },
       {
-        name: "Bootstrap",
+        name: "Styled Components",
         color: "green-text-gradient",
       },
       {
@@ -198,28 +202,48 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: greenme,
+    image: allocateHome,
     // source_code_link: "https://github.com/",
   },
   {
-    name: "Aka People",
+    name: "Project Coach",
     description:
-      "Aka People offers comprehensive freight solutions, including warehousing, transportation, and supply chain management, ensuring efficient and reliable delivery services.",
+      "Project Coach, a game-changing SaaS venture focused on empowering small and medium-sized businesses (SMEs) with data-driven insights. With a mission to democratize business intelligence and foster growth, Project Coach provides a robust assessment tool and ongoing support to help SMEs thrive in today's competitive market.",
     tags: [
       {
-        name: "Next.js",
+        name: "NextJs",
         color: "blue-text-gradient",
+      },
+      {
+        name: "TypeScript",
+        color: "pink-text-gradient",
       },
       {
         name: "Styled Components",
         color: "green-text-gradient",
       },
+    ],
+    image: coachbg,
+  },
+  {
+    name: "SSM Quiz",
+    description:
+      "SSM Quiz Platform tailored specifically for medical students. This platform serves as a comprehensive learning tool designed to enhance medical knowledge and prepare students for exams with interactive quizzes and study resources.",
+    tags: [
       {
-        name: "Scss",
+        name: "TypeScript",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "ReactJS",
+        color: "green-text-gradient",
+      },
+      {
+        name: "Style Components",
         color: "pink-text-gradient",
       },
     ],
-    image: aka,
+    image: smmQuizBg,
   },
   {
     name: "ShopSpy",

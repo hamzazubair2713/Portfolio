@@ -35,6 +35,10 @@ import aka from "./aka.png";
 import nextjs from "../assets/tech/next.png";
 import shopspy from "../assets/shopspy.png";
 import bootstrap from "../assets/tech/bootstrap.svg";
+import lockey from "../assets/lockey.jpg";
+import allocateHome from "../assets/allocateHome.png";
+import smmQuizBg from "../assets/smmQuizBg.png";
+import coachbg from "../assets/coachbg.png";
 
 export {
   nextjs,
@@ -74,4 +78,8 @@ export {
   Api,
   optimization,
   greenme,
+  lockey,
+  allocateHome,
+  smmQuizBg,
+  coachbg,
 };
