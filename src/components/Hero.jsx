@@ -1,8 +1,18 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { styles } from "../styles";
 import emailjs from "@emailjs/browser";
-
+import { useInView } from "react-intersection-observer";
+import Lottie from "lottie-react";
+import animation from "../../src/assets/mainSectionLootie.json";
 const Hero = () => {
+  const [isInView, setIsInView] = useState(false);
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      setIsInView(true);
+    }
+  }, [inView]);
   const [form, setForm] = useState({
     email: "",
   });
@@ -108,6 +118,10 @@ const Hero = () => {
             </button>
           </form>
         </div>
+      </div>
+      {/* {isInView && <Lottie animationData={animation} loop={false} />} */}
+      <div className="w-full max-w-[600px] m-auto">
+        <Lottie animationData={animation} />
       </div>
     </section>
   );
