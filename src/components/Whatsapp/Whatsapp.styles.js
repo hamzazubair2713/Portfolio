@@ -98,7 +98,7 @@ export const WhatsAppHead = styled.div`
     border-radius: 50%;
     border: 1px solid #fff;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       width: 10px;
       height: 10px;
@@ -114,7 +114,7 @@ export const WhatsAppHead = styled.div`
       justify-content: center;
       max-width: 30px;
       img {
-        max-width: 100%;
+        width: 100%;
         height: auto;
       }
     }

@@ -11,12 +11,12 @@ import { BsWhatsapp } from "react-icons/bs";
 import { RxCross2 } from "react-icons/rx";
 import { VscSend } from "react-icons/vsc";
 const Whatsapp = ({
-  brandName = "Webevis Technologies",
+  brandName = "Hamza Zubair",
   status = "Replies within 1 hour",
   messageText = "How can we help?",
   number = "13082550239",
   BgImage = "https://res.cloudinary.com/dlysixl4e/image/upload/v1696925108/whatsappBg_ubnm7c.jpg",
-  logo = "https://res.cloudinary.com/dlysixl4e/image/upload/v1696925556/fav-icon_t4rp5c.png",
+  logo = "https://res.cloudinary.com/dlysixl4e/image/upload/v1711716576/icon_bk3tuk.gif",
 }) => {
   const dropdownRef = useRef(null);
   const [handelWhatsApp, setHandelWhatsApp] = useState(false);
@@ -55,7 +55,7 @@ const Whatsapp = ({
             <WhatsAppHead>
               <div className="dp">
                 <div className="image">
-                  <img src={logo} alt="logo" width={180} height={180} />
+                  <img src={logo} alt="logo" width={150} height={150} />
                 </div>
               </div>
               <div className="text">
