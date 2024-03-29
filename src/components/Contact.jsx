@@ -6,7 +6,11 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
+// template_827g9vv;
 
+// service_nel650m;
+
+// Cdyzq8EFulwfKLVzx;
 const Contact = () => {
   const [form, setForm] = useState({
     name: "",
@@ -30,38 +34,39 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     if (form.email && emailRegex.test(form.email)) {
-      console.log("ssen");
-      // emailjs
-      //   .send(
-      //     import.meta.env.VITE_APP_EMAILJS_SERVICE_ID,
-      //     import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
-      //     {
-      //       from_name: form.name,
-      //       to_name: "JavaScript Mastery",
-      //       from_email: form.email,
-      //       to_email: "sujata@jsmastery.pro",
-      //       message: form.message,
-      //     },
-      //     import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
-      //   )
-      //   .then(
-      //     () => {
-      //       setLoading(false);
-      //       alert("Thank you. I will get back to you as soon as possible.");
+      alert("Please enter your email address");
+      return;
+      emailjs
+        .send(
+          "service_nel650m",
+          "template_827g9vv",
+          {
+            from_name: form.name,
+            to_name: "Hamza Zubair",
+            from_email: form.email,
+            to_email: "hamzazubair228@gmail.com",
+            message: form.message,
+          },
+          "Cdyzq8EFulwfKLVzx"
+        )
+        .then(
+          () => {
+            setLoading(false);
+            alert("Thank you. I will get back to you as soon as possible.");
 
-      //       setForm({
-      //         name: "",
-      //         email: "",
-      //         message: "",
-      //       });
-      //     },
-      //     (error) => {
-      //       setLoading(false);
-      //       console.error(error);
+            setForm({
+              name: "",
+              email: "",
+              message: "",
+            });
+          },
+          (error) => {
+            setLoading(false);
+            console.error(error);
 
-      //       alert("Ahh, something went wrong. Please try again.");
-      //     }
-      //   );
+            alert("Ahh, something went wrong. Please try again.");
+          }
+        );
     } else {
       alert("Enter your email address ");
       console.log("Not send");

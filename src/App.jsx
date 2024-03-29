@@ -1,5 +1,6 @@
 import { BrowserRouter } from "react-router-dom";
 import { About, Contact, Experience, Hero, Works, Navbar } from "./components";
+import Whatsapp from "./components/Whatsapp/Whatsapp";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Works />
         <Contact />
       </div>
+      <Whatsapp />
     </BrowserRouter>
   );
 };
