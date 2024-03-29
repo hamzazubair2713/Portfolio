@@ -16,14 +16,14 @@ const Whatsapp = ({
   messageText = "How can we help?",
   number = "+923082550239",
   BgImage = "https://res.cloudinary.com/dlysixl4e/image/upload/v1696925108/whatsappBg_ubnm7c.jpg",
-  logo = "https://res.cloudinary.com/dlysixl4e/image/upload/v1711716576/icon_bk3tuk.gif",
+  logo = "https://res.cloudinary.com/dlysixl4e/image/upload/v1711717516/icon_y0hi7r.gif",
 }) => {
   const dropdownRef = useRef(null);
   const [handelWhatsApp, setHandelWhatsApp] = useState(false);
   const [whatsAppSnip, setwhatsAppSnip] = useState(false);
 
   const [message, setMessage] = useState("");
-  const Url = `https://wa.me/1${number}?text=${message}`;
+  const Url = `https://wa.me/${number}?text=${message}`;
   const handleClickOutside = (event) => {
     if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
       setHandelWhatsApp(false);

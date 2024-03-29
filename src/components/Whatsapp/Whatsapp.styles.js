@@ -112,7 +112,7 @@ export const WhatsAppHead = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      max-width: 30px;
+      max-width: 40px;
       img {
         width: 100%;
         height: auto;
