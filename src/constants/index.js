@@ -20,6 +20,10 @@ import {
   allocateHome,
   smmQuizBg,
   coachbg,
+  creative,
+  Reliability,
+  communication,
+  dedication,
 } from "../assets";
 
 export const navLinks = [
@@ -98,23 +102,23 @@ const technologies = [
 const experiences = [
   {
     title: "Innovation and Creativity",
-    icon: reactjs,
-    iconBg: "#383E56",
+    icon: creative,
+    iconBg: "#E6DEDD",
     points: [
       "Innovation is at the heart of my work. I bring a fresh perspective and creative solutions to every project, pushing boundaries and thinking outside the box to deliver truly unique and impactful results.",
     ],
   },
   {
     title: "Reliability and Consistency",
-    icon: uiux,
-    iconBg: "#E6DEDD",
+    icon: Reliability,
+    iconBg: "#383E56",
     points: [
       "You can count on me to deliver consistently excellent work, every time. With a track record of reliability and a commitment to meeting deadlines, I ensure that your project progresses smoothly and is completed to the highest standards.",
     ],
   },
   {
     title: "Communication and Collaboration",
-    icon: Api,
+    icon: communication,
     iconBg: "#383E56",
     points: [
       "Effective communication is key to project success. I prioritize open and transparent communication, keeping you informed every step of the way and actively seeking your input to ensure that your vision is fully realized.",
@@ -122,7 +126,7 @@ const experiences = [
   },
   {
     title: "Passion and Dedication",
-    icon: Api,
+    icon: dedication,
     iconBg: "#383E56",
     points: [
       "I am passionate about what I do, and that passion shines through in every project I undertake. With unwavering dedication and a relentless pursuit of excellence, I go above and beyond to exceed your expectations and deliver results that truly impress.",

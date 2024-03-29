@@ -1,6 +1,61 @@
+import { useState } from "react";
 import { styles } from "../styles";
+import emailjs from "@emailjs/browser";
 
 const Hero = () => {
+  const [form, setForm] = useState({
+    email: "",
+  });
+  const emailRegex = /^[\w.%+-]+@(?:[\w-]+\.)+[a-zA-Z]{2,}$/;
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e) => {
+    const { target } = e;
+    const { name, value } = target;
+
+    setForm({
+      ...form,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setLoading(true);
+    if (form.email && emailRegex.test(form.email)) {
+      emailjs
+        .send(
+          "service_nel650m",
+          "template_827g9vv",
+          {
+            from_name: form.name ? form.name : "Anonymous from Main section",
+            to_name: "Hamza Zubair",
+            from_email: form.email,
+            to_email: "hamzazubair228@gmail.com",
+            message: form.message ? form.message : "from Main Section",
+          },
+          "Cdyzq8EFulwfKLVzx"
+        )
+        .then(
+          () => {
+            setLoading(false);
+            alert("Thank you. I will get back to you as soon as possible.");
+
+            setForm({
+              email: "",
+            });
+          },
+          (error) => {
+            setLoading(false);
+            console.error(error);
+            alert("Ahh, something went wrong. Please try again.");
+          }
+        );
+    } else {
+      alert("Enter your email address ");
+    }
+    setLoading(false);
+  };
   return (
     <section
       className={`relative w-full min-h-screen mx-auto md:pt-[150px] pt-[100px] `}
@@ -32,22 +87,23 @@ const Hero = () => {
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
             Let's talk about your vision and how we can make it shine online!
           </p>
-          <form className="mt-5 sm:flex w-full gap-2">
+          <form className="mt-5 sm:flex w-full gap-2" onSubmit={handleSubmit}>
             <input
               type="email"
               name="email"
               placeholder="jhon@example.com"
+              value={form.email}
+              onChange={handleChange}
               maxLength={250}
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium
               w-full sm:mb-0 mb-2"
             />
-            {/* <span className="text-red-700 text-xs my-[2px]">Your email</span> */}
 
             <button
               type="submit"
+              disabled={loading}
               className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-small shadow-md shadow-primary sm:w-[200px] w-full"
             >
-              {/* {loading ? "Sending..." : "Send"} */}
               Let's Meet
             </button>
           </form>

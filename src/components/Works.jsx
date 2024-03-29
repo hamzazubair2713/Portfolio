@@ -58,7 +58,7 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <div>
+      <div id="work" className="scroll-mt-[100px]">
         <p className={styles.sectionSubText}>My Work</p>
         <h2 className={styles.sectionHeadText}>Explore My Projects</h2>
       </div>

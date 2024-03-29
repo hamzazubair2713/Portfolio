@@ -13,7 +13,7 @@ import { VscSend } from "react-icons/vsc";
 const Whatsapp = ({
   brandName = "Hamza Zubair",
   status = "Replies within 1 hour",
-  messageText = "How can we help?",
+  messageText = "How can i help?",
   number = "+923082550239",
   BgImage = "https://res.cloudinary.com/dlysixl4e/image/upload/v1696925108/whatsappBg_ubnm7c.jpg",
   logo = "https://res.cloudinary.com/dlysixl4e/image/upload/v1711717516/icon_y0hi7r.gif",

@@ -21,7 +21,8 @@ const About = () => {
     <>
       <motion.div
         variants={textVariant()}
-        className="mx-auto max-w-[800px] text-center"
+        className="mx-auto max-w-[800px] text-center scroll-mt-[100px]"
+        id="about"
       >
         <p className={styles.sectionSubText}>Introduction</p>
         <h2 className={styles.sectionHeadText}>Overview</h2>

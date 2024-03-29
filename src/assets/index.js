@@ -39,6 +39,10 @@ import lockey from "../assets/lockey.jpg";
 import allocateHome from "../assets/allocateHome.png";
 import smmQuizBg from "../assets/smmQuizBg.png";
 import coachbg from "../assets/coachbg.png";
+import creative from "../assets/creative.gif";
+import Reliability from "../assets/Reliability.gif";
+import communication from "../assets/communication.gif";
+import dedication from "../assets/dedication.gif";
 
 export {
   nextjs,
@@ -82,4 +86,8 @@ export {
   allocateHome,
   smmQuizBg,
   coachbg,
+  creative,
+  Reliability,
+  communication,
+  dedication,
 };

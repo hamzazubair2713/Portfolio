@@ -6,11 +6,7 @@ import { styles } from "../styles";
 import { EarthCanvas } from "./canvas";
 import { SectionWrapper } from "../hoc";
 import { slideIn } from "../utils/motion";
-// template_827g9vv;
 
-// service_nel650m;
-
-// Cdyzq8EFulwfKLVzx;
 const Contact = () => {
   const [form, setForm] = useState({
     name: "",
@@ -34,8 +30,6 @@ const Contact = () => {
     e.preventDefault();
     setLoading(true);
     if (form.email && emailRegex.test(form.email)) {
-      alert("Please enter your email address");
-      return;
       emailjs
         .send(
           "service_nel650m",
@@ -63,20 +57,19 @@ const Contact = () => {
           (error) => {
             setLoading(false);
             console.error(error);
-
             alert("Ahh, something went wrong. Please try again.");
           }
         );
     } else {
       alert("Enter your email address ");
-      console.log("Not send");
     }
     setLoading(false);
   };
 
   return (
     <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden sm:px-4`}
+      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden sm:px-4 scroll-mt-[100px]`}
+      id="contact"
     >
       <motion.div
         variants={slideIn("left", "tween", 0.2, 1)}
@@ -91,6 +84,7 @@ const Contact = () => {
             <input
               type="text"
               name="name"
+              maxLength={250}
               value={form.name}
               onChange={handleChange}
               placeholder="What's your good name?"
@@ -102,12 +96,13 @@ const Contact = () => {
             <input
               type="email"
               name="email"
+              maxLength={300}
               value={form.email}
               onChange={handleChange}
               placeholder="What's your web address?"
               className="bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium"
             />
-            <span className="text-red-700 text-xs my-[2px]">Your email</span>
+            {/* <span className="text-red-700 text-xs my-[2px]">Your email</span> */}
           </label>
           <label className="flex flex-col">
             <span className="text-white font-medium mb-4">Your Message</span>
@@ -123,6 +118,7 @@ const Contact = () => {
 
           <button
             type="submit"
+            disabled={loading}
             className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
           >
             {loading ? "Sending..." : "Send"}
