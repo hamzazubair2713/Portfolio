@@ -32,7 +32,7 @@ const Contact = () => {
     if (form.email && emailRegex.test(form.email)) {
       emailjs
         .send(
-          "service_nel650m",
+          import.meta.env.VITE_SEVICE_ID,
           "template_827g9vv",
           {
             from_name: form.name,
