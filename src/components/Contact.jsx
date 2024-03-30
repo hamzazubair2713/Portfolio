@@ -33,7 +33,7 @@ const Contact = () => {
       emailjs
         .send(
           import.meta.env.VITE_SEVICE_ID,
-          "template_827g9vv",
+          import.meta.env.VITE_TEMP_ID,
           {
             from_name: form.name,
             to_name: "Hamza Zubair",
@@ -41,7 +41,7 @@ const Contact = () => {
             to_email: "hamzazubair228@gmail.com",
             message: form.message,
           },
-          "Cdyzq8EFulwfKLVzx"
+          import.meta.env.VITE_KEY
         )
         .then(
           () => {

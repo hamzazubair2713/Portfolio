@@ -35,8 +35,8 @@ const Hero = () => {
     if (form.email && emailRegex.test(form.email)) {
       emailjs
         .send(
-          "service_nel650m",
-          "template_827g9vv",
+          import.meta.env.VITE_SEVICE_ID,
+          import.meta.env.VITE_TEMP_ID,
           {
             from_name: form.name ? form.name : "Anonymous from Main section",
             to_name: "Hamza Zubair",
@@ -44,7 +44,7 @@ const Hero = () => {
             to_email: "hamzazubair228@gmail.com",
             message: form.message ? form.message : "from Main Section",
           },
-          "Cdyzq8EFulwfKLVzx"
+          import.meta.env.VITE_KEY
         )
         .then(
           () => {
