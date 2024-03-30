@@ -32,8 +32,8 @@ const Contact = () => {
     if (form.email && emailRegex.test(form.email)) {
       emailjs
         .send(
-          import.meta.env.VITE_SEVICE_ID,
-          import.meta.env.VITE_TEMP_ID,
+          "service_nel650m",
+          "template_827g9vv",
           {
             from_name: form.name,
             to_name: "Hamza Zubair",
@@ -41,7 +41,7 @@ const Contact = () => {
             to_email: "hamzazubair228@gmail.com",
             message: form.message,
           },
-          import.meta.env.VITE_KEY
+          "Cdyzq8EFulwfKLVzx"
         )
         .then(
           () => {
